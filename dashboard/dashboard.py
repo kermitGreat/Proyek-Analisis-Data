@@ -9,8 +9,10 @@ import streamlit as st
 # url data = https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data
 
 # ---LOAD CSV FILE---
-hour_df = pd.read_csv('dashboard/hour.csv')
-day_df = pd.read_csv('dashboard/day.csv')
+cwd = os.path.dirname(__file__)
+
+hour_df = pd.read_csv(os.path.join(cwd,'hour.csv'))
+day_df = pd.read_csv(os.path.join(cwd,'day.csv'))
 
 
 # --- HOUR_DF---
